@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <title>이력서</title>
+    <link rel="stylesheet" href="resume_style1.css">
+  </head>
+  <body>
+
+    <header class="profile">
+      <h1>나영철</h1>
+      <p class="profile__desc">오즈코딩스쿨 7기를 수강중인 나영철입니다.</p>
+      <img class="profile__img" src="https://i.pinimg.com/736x/ef/cf/f1/efcff150059cf9bed8385a9c2a92e7c2.jpg" alt="프로필 사진">
+      <p class="contact-row">
+        GitHub:
+        <a class="github-link" href="https://github.com/loehcgnuoy-dev/">내 GitHub 레포지토리</a>
+      </p>
+    </header>
+
+    <main>
+      <section class="section">
+        <h2>자기소개</h2>
+        <p>자기소개 내용을 작성하세요.</p>
+        <p>두 번째 문단 내용을 작성하세요.</p>
+      </section>
+
+      <section class="section">
+        <h2>기술 스택</h2>
+        <ul>
+          <li>Python</li>
+          <li>Java</li>
+          <li>SQL</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>이력</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>기간</th>
+              <th>내용</th>
+              <th>비고</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2021.03 ~ 2026.02</td>
+              <td>삼육보건대학교 의료정보과</td>
+              <td>졸업</td>
+            </tr>
+            <tr>
+              <td>YYYY.MM ~ YYYY.MM</td>
+              <td>내용</td>
+              <td>비고</td>
+            </tr>
+            <tr>
+              <td>YYYY.MM ~ YYYY.MM</td>
+              <td>내용</td>
+              <td>비고</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>메일 보내기</h2>
+        <form action="https://httpbin.org/post" method="post">
+          <div class="form-row">
+            <label for="name">이름</label>
+            <input id="name" type="text" name="name" required placeholder="이름을 입력하세요">
+          </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input id="email" type="email" name="email" required placeholder="example@email.com">
+          </div>
+          <div class="form-row">
+            <label for="subject">제목</label>
+            <input id="subject" type="text" name="subject" required placeholder="제목을 입력하세요">
+          </div>
+          <div class="form-row">
+            <label for="message">내용</label>
+            <input id="message" type="text" name="message" required placeholder="내용을 입력하세요">
+          </div>
+          <button type="submit">보내기</button>
+        </form>
+      </section>
+    </main>
+
+  </body>
+</html>

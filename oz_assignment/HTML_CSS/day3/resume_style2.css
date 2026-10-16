@@ -1,0 +1,284 @@
+/* ===== 1. 공통 설정: box-sizing 통일 ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;   /* 메뉴 클릭 시 부드럽게 이동 */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ===== 2. 기본 레이아웃 (Flex로 footer를 아래에 고정) ===== */
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
+  color: #333;
+  background-color: #f5f7fa;
+}
+
+main {
+  flex: 1;                 /* 남은 공간을 모두 차지 */
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;          /* 가운데 정렬 */
+  padding: 24px;
+  background-color: white;
+}
+
+/* ===== 3. 반응형 Navigation Bar ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  background-color: #2c3e50;
+  color: white;
+  position: sticky;        /* 스크롤해도 상단에 고정 */
+  top: 0;
+  z-index: 100;
+}
+
+.navbar__logo {
+  font-size: 1.4rem;
+}
+
+.navbar__logo i {
+  margin-right: 6px;
+}
+
+.navbar__menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar__menu li {
+  padding: 8px 12px;
+}
+
+.navbar__menu li:hover {
+  background-color: #4a90d9;
+  border-radius: 8px;
+}
+
+.navbar__icons {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar__icons li {
+  padding: 8px 8px;
+  font-size: 1.2rem;
+}
+
+.navbar__icons li:hover {
+  color: #4a90d9;
+}
+
+/* ===== 4. 헤더 (프로필) ===== */
+header.profile {
+  text-align: center;
+  padding: 40px 16px 24px;
+  background-color: #4a90d9;
+  color: white;
+}
+
+.profile__img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid white;
+}
+
+header h1 {
+  font-size: 2.4rem;
+  margin: 16px 0 8px;
+}
+
+.profile__desc {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+/* ===== 5. 연락처 (Flex 가운데 정렬) ===== */
+.contact-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4px;
+  font-size: 0.9rem;
+  margin: 16px;
+}
+
+.contact-row a:hover,
+.github-link:hover {
+  text-decoration: underline;
+}
+
+/* ===== 6. 본문 섹션 (Box Model) ===== */
+.section {
+  margin-bottom: 24px;
+}
+
+h2 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #4a90d9;
+  border-bottom: 2px solid #4a90d9;
+  padding-bottom: 6px;
+  margin-bottom: 12px;
+}
+
+p, li {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+hr {
+  border: none;
+  border-top: 1px dashed #ccc;
+  margin: 24px 0;
+}
+
+/* 메뉴 이동 시 sticky navbar에 가리지 않도록 */
+#about, #skills, #history, #contact {
+  scroll-margin-top: 70px;
+}
+
+/* 목록 두 개를 나란히 */
+.two-col {
+  display: flex;
+  gap: 24px;
+}
+
+.two-col .section {
+  flex: 1;
+}
+
+/* ===== 7. 이력 테이블 ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px 12px;
+  text-align: center;
+}
+
+thead th {
+  background-color: #4a90d9;
+  color: white;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f2f6fb;
+}
+
+tbody tr:hover {
+  background-color: #e3eefa;
+}
+
+/* ===== 8. 메일 폼 ===== */
+.form-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.form-row label {
+  width: 70px;
+  font-weight: bold;
+}
+
+.form-row input {
+  flex: 1;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.form-row input:focus {
+  outline: none;
+  border-color: #4a90d9;
+}
+
+button {
+  padding: 10px 24px;
+  border: none;
+  border-radius: 6px;
+  background-color: #4a90d9;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #357abd;
+}
+
+/* ===== 9. 푸터 ===== */
+footer {
+  text-align: center;
+  font-size: 0.6rem;
+  padding: 16px;
+  margin-bottom: 2rem;
+  color: #888;
+}
+
+/* ===== 10. 반응형 (Media Query) ===== */
+@media (max-width: 600px) {
+  /* navbar: 가로 → 세로 */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+  }
+
+  .navbar__menu {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar__icons {
+    justify-content: center;
+    width: 100%;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .two-col {
+    flex-direction: column;   /* 세로로 쌓기 */
+    gap: 0;
+  }
+
+  .form-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+  }
+
+  .form-row label {
+    width: auto;
+  }
+
+  #about, #skills, #history, #contact {
+    scroll-margin-top: 0;
+  }
+}
