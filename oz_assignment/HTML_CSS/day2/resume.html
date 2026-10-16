@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이력서</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="resume_style.css">
+  </head>
+  <body>
+
+    <!-- 상단: 프로필 -->
+    <header class="profile">
+      <img class="profile__img" src="profile.jpg" alt="프로필 사진">
+      <h1>이름</h1>
+      <p class="profile__desc">한 줄 소개를 작성하세요</p>
+      <div class="contact-row">
+        <span>example@email.com</span>
+        <span class="divider">|</span>
+        <span>010-1234-5678</span>
+        <span class="divider">|</span>
+        <a class="github-link" href="https://github.com/내아이디/레포이름">GitHub</a>
+      </div>
+    </header>
+
+    <!-- 본문 -->
+    <main>
+      <section class="section">
+        <h2>자기소개</h2>
+        <p>자기소개 내용을 작성하세요.</p>
+        <p>두 번째 문단 내용을 작성하세요.</p>
+      </section>
+
+      <hr>
+
+      <!-- 목록 두 개를 나란히 배치 (flex) -->
+      <div class="two-col">
+        <section class="section">
+          <h2>기술 스택</h2>
+          <ul>
+            <li>항목 1</li>
+            <li>항목 2</li>
+            <li>항목 3</li>
+          </ul>
+        </section>
+
+        <section class="section">
+          <h2>학습 목표</h2>
+          <ol>
+            <li>첫 번째 목표</li>
+            <li>두 번째 목표</li>
+            <li>세 번째 목표</li>
+          </ol>
+        </section>
+      </div>
+
+      <hr>
+
+      <section class="section">
+        <h2>이력</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>기간</th>
+              <th>내용</th>
+              <th>비고</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>YYYY.MM ~ YYYY.MM</td>
+              <td>내용</td>
+              <td>비고</td>
+            </tr>
+            <tr>
+              <td>YYYY.MM ~ YYYY.MM</td>
+              <td>내용</td>
+              <td>비고</td>
+            </tr>
+            <tr>
+              <td>YYYY.MM ~ YYYY.MM</td>
+              <td>내용</td>
+              <td>비고</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <hr>
+
+      <section class="section">
+        <h2>메일 보내기</h2>
+        <form action="https://httpbin.org/post" method="post">
+          <div class="form-row">
+            <label for="name">이름</label>
+            <input id="name" type="text" name="name" required placeholder="이름을 입력하세요">
+          </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input id="email" type="email" name="email" required placeholder="example@email.com">
+          </div>
+          <div class="form-row">
+            <label for="subject">제목</label>
+            <input id="subject" type="text" name="subject" required placeholder="제목을 입력하세요">
+          </div>
+          <div class="form-row">
+            <label for="message">내용</label>
+            <input id="message" type="text" name="message" required placeholder="내용을 입력하세요">
+          </div>
+          <button type="submit">보내기</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      Copyright &#169; 이름
+    </footer>
+
+  </body>
+</html>
