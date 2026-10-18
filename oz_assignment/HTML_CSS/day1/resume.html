@@ -1,101 +1,103 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8">
-    <title>이력서</title>
-    <style>
-      .mail-form label {
-        display: inline-block;
-        width: 5em;
-      }
-    </style>
-  </head>
-  <body>
 
-    <!-- 1. 제목 / 프로필 -->
-    <h1>나영철</h1>
-    <p>오즈코딩스쿨 7기를 수강중인 나영철입니다.</p>
+<head>
+  <meta charset="UTF-8">
+  <title>이력서</title>
+  <style>
+    .mail-form label {
+      display: inline-block;
+      width: 5em;
+    }
+  </style>
+</head>
 
-    <!-- 4. 프로필 이미지 (이미지 파일을 같은 폴더에 두고 파일명 수정) -->
-    <img src="https://i.pinimg.com/736x/ef/cf/f1/efcff150059cf9bed8385a9c2a92e7c2.jpg" alt="프로필 사진" width="150">
+<body>
 
-    <!-- 5. 깃허브 링크 -->
-    <p>
-      GitHub:
-      <a href="https://github.com/loehcgnuoy-dev/">내 GitHub 레포지토리</a>
-    </p>
+  <!-- 1. 제목 / 프로필 -->
+  <h1>나영철</h1>
+  <p>오즈코딩스쿨 7기를 수강중인 나영철입니다.</p>
 
-    <hr>
+  <!-- 4. 프로필 이미지 (이미지 파일을 같은 폴더에 두고 파일명 수정) -->
+  <img src="https://i.pinimg.com/736x/ef/cf/f1/efcff150059cf9bed8385a9c2a92e7c2.jpg" alt="프로필 사진" width="150">
 
-    <!-- 2. 자기소개 -->
-    <h2>자기소개</h2>
-    <p>자기소개 내용을 작성하세요.</p>
-    <p>두 번째 문단 내용을 작성하세요.</p>
+  <!-- 5. 깃허브 링크 -->
+  <p>
+    GitHub:
+    <a href="https://github.com/loehcgnuoy-dev/">내 GitHub 레포지토리</a>
+  </p>
 
-    <hr>
+  <hr>
 
-    <!-- 기술 스택 (순서 없는 목록) -->
-    <h2>기술 스택</h2>
-    <ul>
-      <li>Python</li>
-      <li>Java</li>
-      <li>SQL</li>
-    </ul>
+  <!-- 2. 자기소개 -->
+  <h2>자기소개</h2>
+  <p>오즈코딩스쿨 AI 헬스케어 부트캠프를 수강중이며, 의료 IT 개발자가 되고 싶습니다.</p>
 
-    <hr/>
+  <hr>
 
-    <!-- 3. 이력 테이블 -->
-    <h2>이력</h2>
-    <table border="1">
-      <thead>
-        <tr>
-          <th>기간</th>
-          <th>내용</th>
-          <th>비고</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>2021.03 ~ 2026.02</td>
-          <td>삼육보건대학교 의료정보과</td>
-          <td>졸업</td>
-        </tr>
-        <tr>
-          <td>YYYY.MM ~ YYYY.MM</td>
-          <td>내용</td>
-          <td>비고</td>
-        </tr>
-        <tr>
-          <td>YYYY.MM ~ YYYY.MM</td>
-          <td>내용</td>
-          <td>비고</td>
-        </tr>
-      </tbody>
-    </table>
+  <!-- 기술 스택 (순서 없는 목록) -->
+  <h2>기술 스택</h2>
+  <ul>
+    <li>Python</li>
+    <li>Java</li>
+    <li>SQL</li>
+  </ul>
 
-    <hr>
+  <hr />
 
-    <!-- 6. 메일 발송 폼 (과제 양식에 맞게 항목 수정) -->
-    <h2>메일 보내기</h2>
-    <form class="mail-form" action="https://httpbin.org/post" method="post">
-      <label for="name">이름</label>
-      <input id="name" type="text" name="name" required placeholder="이름을 입력하세요">
-      <br>
+  <!-- 3. 이력 테이블 -->
+  <h2>이력</h2>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>기간</th>
+        <th>내용</th>
+        <th>비고</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>2021.03 ~ 2026.02</td>
+        <td>삼육보건대학교 의료정보과</td>
+        <td>졸업</td>
+      </tr>
+      <tr>
+        <td>2026.07 ~ </td>
+        <td>오즈코딩스쿨 AI 헬스케어 부트캠프</td>
+        <td>수강중</td>
+      </tr>
+      <tr>
+        <td>YYYY.MM ~ YYYY.MM</td>
+        <td>내용</td>
+        <td>비고</td>
+      </tr>
+    </tbody>
+  </table>
 
-      <label for="email">Email</label>
-      <input id="email" type="email" name="email" required placeholder="example@email.com">
-      <br>
+  <hr>
 
-      <label for="subject">제목</label>
-      <input id="subject" type="text" name="subject" required placeholder="제목을 입력하세요">
-      <br>
+  <!-- 6. 메일 발송 폼 (과제 양식에 맞게 항목 수정) -->
+  <h2>메일 보내기</h2>
+  <form class="mail-form" action="https://httpbin.org/post" method="post">
+    <label for="name">이름</label>
+    <input id="name" type="text" name="name" required placeholder="이름을 입력하세요">
+    <br>
 
-      <label for="message">내용</label>
-      <input id="message" type="text" name="message" required placeholder="내용을 입력하세요">
-      <br>
+    <label for="email">Email</label>
+    <input id="email" type="email" name="email" required placeholder="example@email.com">
+    <br>
 
-      <button type="submit">보내기</button>
-    </form>
+    <label for="subject">제목</label>
+    <input id="subject" type="text" name="subject" required placeholder="제목을 입력하세요">
+    <br>
 
-  </body>
+    <label for="message">내용</label>
+    <input id="message" type="text" name="message" required placeholder="내용을 입력하세요">
+    <br>
+
+    <button type="submit">보내기</button>
+  </form>
+
+</body>
+
 </html>
